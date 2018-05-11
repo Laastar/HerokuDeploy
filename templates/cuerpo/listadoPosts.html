@@ -1,0 +1,16 @@
+
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+{%  for post in posts %}
+
+<div>
+    <div>Fecha de publicación: {{ post.fechaPublicacion }}</div>
+    <h1><a href="{% url 'detalles' pk=post.pk %}"> {{ post.titulo }}</a></h1>
+    <p> {{ post.texto|linebreaksbr }}</p>
+</div>
+
+{% endfor %}
+
+{% endblock %}

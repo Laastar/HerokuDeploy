@@ -1,0 +1,97 @@
+.logo {
+	width: 30%;
+}
+
+.justificado{
+	text-align: center;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.fac {
+	width: 100%
+}
+
+.carta {
+	width: 100%;
+	border: black;
+}
+
+.unfoot {
+	color: #EB2B62;
+} 
+
+.head {
+	font-family: 'Black Han Sans', sans-serif;
+	color: #000000;
+}
+
+.especial2{
+	font-family: sans-serif;
+	color: #EF2593;	
+}
+.especial1{
+	font-family: sans-serif;
+    font-size: 200%;
+    text-align: justify;
+    color: #621A46;
+}
+
+.especial11{
+	font-family: sans-serif;
+    font-size: 200%;
+    text-align: center;
+    color: #621A46;
+}
+
+.especial3{
+	font-family: 'Pacifico', cursive;
+	font-size: 150%;
+	text-align: justify;
+	background: #FFFFFF;
+	color: #420942;	
+}
+.especial4{
+	font-family: sans-serif;
+	color: #E01591;
+	text-align: left;
+	font-size: font-size: 20px;	
+}
+
+.titulo {
+	font-family: 'Pacifico', cursive;
+	color:#FD8DFA;	
+}
+
+.subtitulo {
+	font-family: 'Pacifico', cursive;
+	color: #E34FE1;
+}
+
+.tipro {
+	font-family: 'Pacifico', cursive;
+	color:#5E005C;		
+}
+
+.ti {
+	font-family: 'Do Hyeon', sans-serif;
+	color: black;	
+}
+
+.trabajo {
+
+    font-family: 'Crete Round', serif;
+}
+
+.imgtips{
+	width: 500px;
+	height: 350px;
+}

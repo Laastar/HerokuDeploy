@@ -1,0 +1,143 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+    <main>
+        <ul class="pagination">
+            <br>
+            <center>
+                <li class="disabled"><a href="{% url 'maquillaje' %}"><i class="material-icons">chevron_left</i></a>
+                </li>
+                <li class="waves-effect"><a href="{% url 'menuproductos' %}">Productos de Style & Design</a></li>
+                <li class="waves-effect"><a href="{% url 'maquillaje' %}">Maquillaje</a></li>
+                <li class="active"><a href="{% url 'barnices' %}">Barnices</a></li>
+                <li class="waves-effect"><a href="{% url 'cuidado' %}">Cuidado Personal</a></li>
+                <li class="waves-effect"><a href="{% url 'cabello' %}">Cuidado del Cabello</a></li>
+                <li class="waves-effect"><a href="{% url 'perfumes' %}">Perfumes y Lociones</a></li>
+                <li class="disabled"><a href="{% url 'cuidado' %}"><i class="material-icons">chevron_right</i></a></li>
+            </center>
+        </ul>
+        <div class="container">
+            <div id="structure" class="section scrollspy">
+                <center><h5 class="especial4">Barnices</h5></center>
+                <p class="flow-text">El Esmalte de Uñas siempre dará un toque de glamour, delicadeza y sensualidad a
+                    nuestras manos. Por ello, nuestras colecciones de esmaltes tienen tonos vivos y de gran colorido que
+                    se pueden combinar con tonos de maquillaje monocromáticos para resaltar la fuerza y sencillez de tu
+                    personalidad.</p>
+                <div class="divider"></div>
+                <div class="section">
+                    <h5 class="especial2">Barnices</h5>
+                    <p>Flora mini</p>
+                    <div class="row">
+                        {% for barnice in barnices %}
+                            {% if barnice.id < 6 %}
+                                <div class="col s3">
+                                    <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <img class="activator" src="{{ barnice.imagen }}">
+                                        </div>
+                                        <div class="card-content">
+
+                                            <span class="card-title activator grey-text text-darken-4">{{ barnice.nombre }}<br><i
+                                                    class="material-icons right">more_vert</i></span><br>
+
+                                        </div>
+                                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ barnice.nota }}
+                        <br>
+                        <br>
+                        <p>{{ barnice.descricpion }}</p>
+                        <br>
+                        <div class="divider"></div>
+                        <br>
+                        <p> ${{ barnice.precio }}</p>
+                        <i class="material-icons right">close</i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div id="structure" class="section scrollspy">
+                <div class="divider"></div>
+                <div class="section">
+                    <p>Escarcha mini</p>
+                    <div class="row">
+                        {% for barnice in barnices %}
+                            {% if barnice.id > 5 %}
+                                {% if barnice.id < 10 %}
+                                    <div class="col s3">
+                                        <div class="card">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="{{ barnice.imagen }}">
+                                            </div>
+                                            <div class="card-content">
+
+                                            <span class="card-title activator grey-text text-darken-4">{{ barnice.nombre }}<br><i
+                                                    class="material-icons right">more_vert</i></span><br>
+
+                                            </div>
+                                            <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ barnice.nota }}
+                        <br>
+                        <br>
+                        <p>{{ barnice.descricpion }}</p>
+                        <br>
+                        <div class="divider"></div>
+                        <br>
+                        <p> ${{ barnice.precio }}</p>
+                        <i class="material-icons right">close</i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div id="structure" class="section scrollspy">
+                <div class="divider"></div>
+                <div class="section">
+                    <p>Fruits mini</p>
+                    <div class="row">
+                        {% for barnice in barnices %}
+                            {% if barnice.id > 9 %}
+                                {% if barnice.id < 14 %}
+                                    <div class="col s3">
+                                        <div class="card">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="{{ barnice.imagen }}">
+                                            </div>
+                                            <div class="card-content">
+
+                                            <span class="card-title activator grey-text text-darken-4">{{ barnice.nombre }}<br><i
+                                                    class="material-icons right">more_vert</i></span><br>
+
+                                            </div>
+                                            <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ barnice.nota }}
+                        <br>
+                        <br>
+                        <p>{{ barnice.descricpion }}</p>
+                        <br>
+                        <div class="divider"></div>
+                        <br>
+                        <p> ${{ barnice.precio }}</p>
+                        <i class="material-icons right">close</i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

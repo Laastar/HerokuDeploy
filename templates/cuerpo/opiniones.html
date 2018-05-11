@@ -1,0 +1,43 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col m12">
+                    <h2 class="ti">
+                        Tus opiniones son importantes para nosotros
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m6 s12">
+                    <form class="post-form" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button onclick="Ejecuta()" class="waves-effect purple accent-3 btn-large" type="submit">Enviar
+                        </button>
+                    </form>
+                </div>
+                <div class="col m6 s12">
+                    <h4 class="head"> Ve lo que dicen nuestros usuarios en FaceBook</h4>
+                    <div class="fb-comments" data-href="https://armando101.github.io/Proyeto-Web/"
+                         data-numposts="25"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=577273769321198&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+{% endblock %}

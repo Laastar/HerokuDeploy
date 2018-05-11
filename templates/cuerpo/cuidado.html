@@ -1,0 +1,74 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+    <main>
+        <ul class="pagination">
+            <br>
+            <center>
+                <li class="disabled"><a href="{% url 'barnices' %}"><i class="material-icons">chevron_left</i></a></li>
+                <li class="waves-effect"><a href="{% url 'menuproductos' %}">Productos de Style & Design</a></li>
+                <li class="waves-effect"><a href="{% url 'maquillaje' %}">Maquillaje</a></li>
+                <li class="waves-effect"><a href="{% url 'barnices' %}">Barnices</a></li>
+                <li class="active"><a href="{% url 'cuidado' %}">Cuidado Personal</a></li>
+                <li class="waves-effect"><a href="{% url 'cabello' %}">Cuidado del Cabello</a></li>
+                <li class="waves-effect"><a href="{% url 'perfumes' %}">Perfumes y Lociones</a></li>
+                <li class="disabled"><a href="{% url 'cabello' %}"><i class="material-icons">chevron_right</i></a></li>
+                </li>
+            </center>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m9 l12">
+                    <div id="structure" class="section scrollspy">
+                        <h5 class="especial2">Cuidado Personal</h5>
+                        <p>El cuidado personal, es un tema de interés para hombres y mujeres. El cual no debemos dejar
+                            de descuidar, ya que gracias a él mantenemos en equilibrio el estado de nuestro cuerpo y
+                            mente, interior y exteriormente.Es por ello, que les presentamos algunos productos de
+                            cuidado personal enfocados a la higiene o aseo personal que podemos realizar nosotros
+                            mismos antes de empezar el día y que quizás ya muchos de ustedes realizan, pero no está
+                            de más recordarlos.</p>
+                        <div class="divider"></div>
+                        <div class="section">
+                            <h5 class="especial2">Cuidado Personal</h5>
+                            <p>Cremas y otros</p>
+                            <div class="row">
+                                {% for cuidadpersonal in cuidadopersonals %}
+                                    <div class="col s3">
+                                        <div class="card">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="{{ cuidadpersonal.imagen }}">
+                                            </div>
+                                            <div class="card-content">
+
+                                            <span class="card-title activator grey-text text-darken-4">{{ cuidadpersonal.nombre }}<br><i
+                                                    class="material-icons right">more_vert</i></span><br>
+
+                                            </div>
+                                            <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ cuidadpersonal.nota }}
+                        <br>
+                        <br>
+                        <p>{{ cuidadpersonal.descricpion }}</p>
+                        <br>
+                        <div class="divider"></div>
+                        <br>
+                        <p> ${{ cuidadpersonal.precio }}</p>
+                        <i class="material-icons right">close</i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+{% endblock %}

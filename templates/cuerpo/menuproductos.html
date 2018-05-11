@@ -1,0 +1,41 @@
+
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<ul class="pagination">
+    <center>
+        <br>
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="{% url 'menuproductos' %}">Productos de Style & Design</a></li>
+        <li class="waves-effect"><a href="{% url 'maquillaje' %}">Maquillaje</a></li>
+        <li class="waves-effect"><a href="{% url 'barnices' %}">Barnices</a></li>
+        <li class="waves-effect"><a href="{% url 'cuidado' %}">Cuidado Personal</a></li>
+        <li class="waves-effect"><a href="{% url 'cabello' %}">Cuidado del Cabello</a></li>
+        <li class="waves-effect"><a href="{% url 'perfumes' %}">Perfumes y Lociones</a></li>
+        <li class="disabled"><a href="{% url 'maquillaje' %}"><i class="material-icons">chevron_right</i></a></li>
+        </li>
+    </center>
+</ul>
+
+<div class="container">
+    <center>
+        <h1 class="tipro">Productos de Style & Design</h1>
+        <p class="especial1">Hacer modificaciones en nuestra apariencia puede ayudarnos a lograr un verdadero cambio de
+            imagen, que muchas veces buscamos pero no nos animamos a hacer. Por ello, Style & desing trae para ti una
+            variedad de productos exclusivos de belleza a precios accesibles para que te atrevas a renovar look y cuidar
+            tu cuerpo ¡sin gastar una fortuna!.</p>
+    </center>
+    <p class="enunciado">Propaganda que puede interesarte...</p>
+    <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#four!"><img src= "{% static 'cuerpo/img/propaganda4.jpg' %}"></a>
+        <a class="carousel-item" href="#one!"><img src= "{% static 'cuerpo/img/propaganda2.jpg' %}"></a>
+        <a class="carousel-item" href="#one!"><img src= "{% static 'cuerpo/img/propaganda22.jpg' %}"></a>
+        <a class="carousel-item" href="#four!"><img src= "{% static 'cuerpo/img/propaganda3.jpg' %}"></a>
+    </div>
+</div>
+</main>
+
+{% endblock %}

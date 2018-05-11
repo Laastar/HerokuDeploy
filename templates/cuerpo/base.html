@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Style & Design</title>
+    <link rel="stylesheet" href="{% static 'cuerpo/css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cuerpo/css/style.css' %}">
+    <link rel ="stylesheet" href="https://fonts.googleapis.com\icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+<body background="{% static 'cuerpo/img/fondo1.jpg' %}">
+    <nav>
+		<div class="nav-wrapper #f48fb1 pink lighten-3">
+			<a href="{% url 'index' %}" class="brand-logo"><img src= "{% static 'cuerpo/img/Logo.jpg' %}" class="logo"> </a>
+			<a href="{% url 'index' %}" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="{% url 'index' %}">Incio</a></li>
+                <li><a href="{% url 'menuproductos' %}">Productos</a></li>
+                <li><a href="{% url 'citas' %}">Citas</a></li>
+                <li><a href="{% url 'tips' %}">Tips de Belleza</a></li>
+                <li><a href="{% url 'opiniones' %}">Opiniones</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'login' %}">Sesión</a></li>
+			</ul>
+		</div>
+	</nav>
+	<ul class="sidenav #fce4ec pink lighten-5" id="mobile-demo">
+		<li><a href="{% url 'index' %}">Incio</a></li>
+        <li><a href="{% url 'menuproductos' %}">Productos</a></li>
+        <li><a href="{% url 'citas' %}">Citas</a></li>
+        <li><a href="{% url 'tips' %}">Tips de Belleza</a></li>
+        <li><a href="{% url 'opiniones' %}">Opiniones</a></li>
+        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        <li><a href="{% url 'login' %}">Sesión</a></li>
+	</ul>
+    {% for message in messages %}
+            <center>
+                <h1>{{ message }}</h1>
+            </center>
+    {% endfor %}
+
+{% block content %}
+
+
+
+{% endblock %}
+
+    <footer class="page-footer #f48fb1 pink lighten-3">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Style & Design </h5>
+					<p class="grey-text text-lighten-4">Style & Design es una empresa comprometida con tu belleza</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<center>
+						<h5 class="white-text">Siguenos</h5>
+						<ul>
+							<a href="#" class="btn-floating btn-large waves-effect waves-light #f48fb1 pink lighten-3"><i class="material-icons"><img src= "{% static 'cuerpo/img/Face.png' %}" class="fac"></i></a>
+							<a href="#" class="btn-floating btn-large waves-effect waves-light #f48fb1 pink lighten-3"><i class="material-icons"><img src= "{% static 'cuerpo/img/twiter.png' %}" class="fac"></i></a>
+							<a href="#" class="btn-floating btn-large waves-effect #f48fb1 pink lighten-3"><i class="material-icons"><img src= "{% static 'cuerpo/img/you.png' %}" class="fac"></i></a>
+							<br>
+							<br>
+							<a href="{% url 'unete' %}" class="unfoot">Unete a nuestro equipo de Trabajo</a>
+						</ul>
+					</center>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<span style="color:white;">💝</span> © 2018 Copyright
+				<a class="grey-text text-lighten-4 right" href="#!"></a>
+			</div>
+		</div>
+	</footer>
+
+</body>
+<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script type="text/javascript" src="{% static 'cuerpo/js/materialize.js' %}"></script>
+<script type="text/javascript" src="{% static 'cuerpo/js/add.js' %}"></script>
+</html>

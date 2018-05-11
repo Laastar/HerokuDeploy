@@ -1,0 +1,45 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+    <main>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <center>
+                    <h3 class="head">Escribe tu correo electronico</h3>
+                </center>
+                <div class="col s6 offset-s3 white">
+                    <form class="post-form" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn waves-effect purple accent-3" type="submit">Recuperar Contrasena
+                        </button>
+                    </form>
+                </div>
+                <div class="col s12">
+                    <br><br>
+                    <br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 offset-s3">
+                    <a class="btn waves-effect #d500f9 purple accent-3" type="button" name="action"
+                       href={% url 'login' %}>Inicia Sesion!
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 offset-s3">
+                    <a class="btn waves-effect #d500f9 purple accent-3" type="button" name="action"
+                       href={% url 'registro' %}>Registrate!
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

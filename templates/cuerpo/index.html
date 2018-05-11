@@ -1,0 +1,67 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+    <main>
+        <div class="parallax-container">
+            <div class="parallax"><img src="{% static 'cuerpo/img/corte.jpg' %}"></div>
+        </div>
+        <div class="section white">
+            <div class="row container">
+                <h2 class="titulo">
+                    <center>Style & Design</center>
+                </h2>
+                <h4 class="subtitulo" class="grey-text text-darken-3 lighten-3">
+                    <center> Comprometidos con tu belleza</center>
+                </h4>
+                <div class="container ">
+                    <center><img class="justificado" src="{% static 'cuerpo/img/colores.jpg' %}" class="carta"></center>
+                    <div class="row">
+                        <div class="container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax"><img src="{% static 'cuerpo/img/maquillaje2.jpg' %}"></div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col m6">
+                    <h2 class="head">
+                        Mision
+                    </h2>
+                    <div class="row">
+                        <div class="col m12">
+                            <p>Nuestra Misión ha sido Enriquecer la Vida de las Mujeres de nuestro país. Nuestra Empresa
+                                ofrece una gran Oportunidad de Negocio dedicada al cuidado de la piel y maquillaje de
+                                calidad y brinda las herramientas necesarias basadas en principios y valores enfocados
+                                al trabajo en equipo, el respeto a la individualidad, la honestidad y transparencia en
+                                nuestras relaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <h2 class="head">
+                        Vision
+                    </h2>
+                    <div class="row">
+                        <div class="col m12">
+                            <p>Nuestra Visión y principal motor es que cada mujer diga que ama Style & Design por su
+                                gratificante Oportunidad de Negocio, sus productos irresistibles y más vendidos, así
+                                como por su impacto positivo en la comunidad. Hoy tú puedes enriquecer tu vida y la de
+                                las mujeres y niños de México y el mundo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+{% endblock %}

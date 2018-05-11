@@ -1,0 +1,34 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    <main>
+        <br><br><br><br>
+        <div class="row">
+            <center>
+                <h3 class="head">Registrate!</h3>
+            </center>
+            <div class="col m6 offset-m3 white">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default purple accent-3">Continuar</button>
+                </form>
+            </div>
+            <div class="col s12">
+                <br><br>
+                <br><br>
+            </div>
+            <div class="col s6 offset-s3">
+                <center>
+                    <h3 class="head">Ya estas registrado?</h3>
+                    <h3 class="head">Inicia sesion!</h3>
+                    <a class="btn waves-effect #d500f9 purple accent-3" type="button" name="action"
+                       href={% url 'login' %}>Inicia Sesion
+                    </a>
+                </center>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

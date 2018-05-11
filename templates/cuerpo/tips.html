@@ -1,0 +1,172 @@
+{% extends 'cuerpo/base.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+
+        <main>
+        <div class="container">
+        <div class="row">
+                <center><h3 class = "tipro">Consejos de maquillaje</h3></center>
+                <p class = "especial1">Las mujeres aprendemos a hacer muchas cosas de la nada y maquillarnos es una de ellas, pero cuando no tenemos talento o de plano nuestra mamá no nos dio ni un solo consejo al respecto, debemos buscar ayuda en otras partes.</p>
+                <p class = "especial11">Aquí te dejamos trucos para lograr un buen maquillaje ¡aunque no seas una experta!</p>
+                <h4 class = "especial4">Maquillaje</h4>
+                    <p class="flow-text">Es cierto que una mujer con la cara limpia puede ser igual de hermosa que una mujer que está bien maquillada, simplemente hay que saber valorar la belleza de una y otra.
+                    También es cierto que si te pasas con el maquillaje los resultados pueden ser horribles, por ese motivo siempre aconsejo que si te gusta maquillarte por supuesto debes hacerlo, ¡pero con moderación! Si te ves guapa no hace falta que sigas.</p>
+                    <p class = "especial3"> </p>
+                    <ul class = "collapsible" data-collapsible = "accordion">
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>¿Pestañas bonitas?</div>
+                            <div class = "collapsible-body"><p>Si quieres usar pestañas postizas, hazlo con pegamento quirúrgico; la clave es ponerlas desde el centro hacia los lados. Y aquí un secreto: sabrás que están bien puestas cuando no te molesten.
+                            <br>
+                            <img src="{% static 'cuerpo/img/tippestana.jpg' %}" class = "imgtips">
+                          </p></div>
+                       </li>
+                       
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Oculta tus desvelos</div>
+                          <div class = "collapsible-body"><p>¡Quita ojeras con naranja!.Si tienes ojeras muy marcadas, utiliza maquillaje en tonos naranja en esa zona y luego aplica el corrector.</p>
+                          <img src="{% static 'cuerpo/img/tipojera.jpg' %}">
+                          </div>
+                       </li>
+                       
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Ruborizate</div>
+                          <div class = "collapsible-body"><p>Sonríe para el rubor
+                              El rubor es lo último que debes ponerte. La tendencia actual es marcar la manzana que se forma en tus pómulos al sonreír.</p>
+                            <img src="{% static 'cuerpo/img/cuadrito2.jpg' %}" class = "imgtips"></div>
+                       </li>
+
+                      <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>¿No tienes tiempo de maquillarte?</div>
+                          <div class = "collapsible-body">
+                            <p>Sólo maquilla tus cejas para lograr un buen look cuando no tienes tiempo para aplicar más maquillaje</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipceja.png' %}" class = "imgtips">
+                          </div>
+                       </li>
+                      <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>¿Tu lapiz delineador ya no pinta?</div>
+                          <div class = "collapsible-body">
+                            <p>Para intensificar el color de tu lápiz delineador viejo, sólo calientalo unos segundos con un encendedor.</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipcalienta.jpg' %}">
+                          </div>
+                       </li>
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>De claros a oscuros</div>
+                          <div class = "collapsible-body">
+                            <p>El ideal del maquillaje es que tu cara parezca ovalada. Utiliza 3 tonos de maquillaje: uno claro para las partes donde te daría la luz (pómulos, barbilla y en medio de los ojos); otro más oscuro para las zonas de sombra (marca las líneas haciendo una cara de pescado); y la base, de tu tono de piel.</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipdifum.jpg' %}" class = "imgtips">
+                          </div>
+                       </li>
+                    </ul>
+               </div>
+               <h4 class = "especial4">Cuidado de la piel</h4>
+                    <p class="flow-text">Algunas personas creen que para lucir una piel tersa y saludable, deben gastar todos sus ahorros en cremas costosas. Sin embargo, esto no tiene que ser así. Algunos consejos y cuidados básicos te ayudarán a mejorar la piel y tener un cutis envidiable. Te damos algunas ideas.</p>
+                    <p class = "especial3"> </p>
+                    <ul class = "collapsible" data-collapsible = "accordion">
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Limpieza a la noche</div>
+                            <div class = "collapsible-body"><p>Al finalizar el día, es fundamental limpiar el rostro para quitar los restos de maquillaje, las células viejas, la suciedad, el polvo y las bacterias. La higiene ayuda a que la piel se oxigene, al quitar las obstrucciones que podían tapar los poros. Luego de la crema de limpieza, se sugiere lavarse con agua tibia.
+                            <br>
+                            <img src="{% static 'cuerpo/img/tiptibia.jpg' %}" class = "imgtips">
+                          </p></div>
+                       </li>
+                       
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i> Protector solar antes de salir</div>
+                          <div class = "collapsible-body"><p>Con la piel limpia y humectada, sólo falta la protección solar. Aunque uno no te vayas a tirar al sol, basta caminar unas cuadras o pararse en el patio a tender la ropa para que el sol queme la piel y deje manchas, además de correr el riesgo de contraer cáncer de piel. Por eso mejor elegir factor de protección 30, para arriba.</p>
+                          <img src="{% static 'cuerpo/img/tipsolar.jpg' %}" class= "imgtips">
+                          </div>
+                       </li>
+                       
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Para tener una piel sana, ¡no exfoliar!</div>
+                          <div class = "collapsible-body"><p>La proliferación de productos “exfoliantes” instaló en las mujeres la costumbre de exfoliar la piel a menudo. Pero para los expertos, esto es un error. Las cremas con gránulos no exfolian y además irritan la piel.</p>
+                            <img src="{% static 'cuerpo/img/tipexfo.jpg' %}" class = "imgtips"></div>
+                       </li>
+
+                      <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Solo uso jabón suave para la piel</div>
+                          <div class = "collapsible-body">
+                            <p>¿La piel de tu cuerpo tiende a secarse, sobre todo después de la ducha? Es importante usar productos de cuidado de la piel que sean suaves y sin jabón para la rutina de limpieza. Si utilizás productos demasiado fuertes, tu piel puede volverse extremadamente seca y sentirse molesta. Los mejores productos que se pueden usar son: jabones ricos en lípidos.</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipbano.jpg' %}" class = "imgtips">
+                          </div>
+                       </li>
+                      <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Huye del estrés y la fatiga</div>
+                          <div class = "collapsible-body">
+                            <p>La piel sensible reacciona ante situaciones de estrés y de fatiga con brotes y erupciones, así que nuestro consejo es que si tu piel es sensible, evites estas situaciones, practicando ejercicios de relajación.</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipestres.jpg' %}">
+                          </div>
+                       </li>
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Bebe más agua</div>
+                          <div class = "collapsible-body">
+                            <p>Bebe más agua de tal forma que tu piel produzca menos grasa para prevenir erupciones.</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipagua.jpg' %}" class = "imgtips">
+                          </div>
+                       </li>
+                    </ul>
+                    <h4 class = "especial4">Cabello bonito</h4>
+                    <p class="flow-text">Te gusta el pelo corto o largo? Es recomendable cortarlo al menos una vez al mes y realizar un suave masaje capilar una vez a la semana. A la hora de cepillarlo, conviene usar peines de púas anchas y hacerlo de atrás hacia delante, lo que fomentará la circulación sanguínea en tu cuero cabelludo.</p>
+                    <p class = "especial3"> </p>
+                    <ul class = "collapsible" data-collapsible = "accordion">
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Escoge el cepillo adecuado.</div>
+                            <div class = "collapsible-body"><p> El cepillo depende de la cantidad de cabello que se tiene, así como  si es lacio o rizado. Los lacios deben preferir las cerdas separadas, mientras los rizados tienen que evitarlos. Se debe verificar que el cepillo tenga gomita en las cerdas para no lastimar la piel.
+                            <br>
+                            <img src="{% static 'cuerpo/img/tipcepi.jpg' %}" class = "imgtips">
+                          </p></div>
+                       </li>
+                       
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Baño de 5 minutos</div>
+                          <div class = "collapsible-body"><p>Con la piel limpia y humectada, sólo falta la protección solar. Aunque uno no te vayas a tirar al sol, basta caminar unas cuadras o pararse en el patio a tender la ropa para que el sol queme la piel y deje manchas, además de correr el riesgo de contraer cáncer de piel. Por eso mejor elegir factor de protección 30, para arriba.</p>
+                          <img src="{% static 'cuerpo/img/tipbano2.jpg' %}" width="700" height="450">
+                          </div>
+                       </li>
+                       
+                       <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>Es mejor suelto</div>
+                          <div class = "collapsible-body"><p>Jamás te amarres el cabello húmedo y sécalo muy bien si te bañas antes de dormir.</p>
+                            <img src="{% static 'cuerpo/img/tipsuelto.jpg' %}" class = "imgtips"></div>
+                       </li>
+
+                      <li>
+                          <div class = "collapsible-header">
+                             <i class = "material-icons"></i>El peor enemigo...El tinte</div>
+                          <div class = "collapsible-body">
+                            <p>El estrés es uno de los principales enemigos.
+                            Tintes, sobre todo aquellos que van acompañados de sustancias como amoniaco y peróxido.</p>
+                            <br>
+                            <img src="{% static 'cuerpo/img/tiptinte.jpg' %}">
+                          </div>
+                       </li>
+                    </ul>
+               </div>
+          </div>          
+        </main>
+
+{% endblock %}
